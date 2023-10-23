@@ -1,2 +1,2 @@
 # Juego-preguntas
-Creando un juego de preguntas con JavaScript.
+Creando un juego de preguntas con JavaScript
