@@ -25,6 +25,11 @@ const obtenerBotones = () => {
   });
 };
 
+/**
+ *
+ * @param {number} index
+ */
+
 const checkRespuesta = (index) => {
   const respuestaCorrecta = index === questions[preguntaActual].correct;
   const seleccionarBoton = contenedorRespuestas.querySelector(
@@ -52,24 +57,22 @@ const pasarPregunta = () => {
 };
 
 const mostrarResultados = () => {
-  contenedorCabecera.style.display = "none";
-  contenedorPreguntas.style.display = "none";
+  contenedorCabecera.classList.add("hidden");
+  contenedorPreguntas.classList.add("hidden");
   contenedorRespuestas.innerHTML = `
-      <p>
-          Preguntas completadas! <br>
-          Puntuación: ${puntuacion} de ${questions.length}
-        </p>
+      <p class="final-results">Preguntas completadas!</p>
+      <p class="final-results">Puntuación: ${puntuacion} de ${questions.length}</p>
         `;
-  botonReset.style.display = "block";
+  botonReset.classList.add("show");
 };
 
 const resetearPreguntas = () => {
-  contenedorCabecera.style.display = "block";
+  contenedorCabecera.classList.remove("hidden");
   preguntaActual = 0;
   puntuacion = 0;
   puntuacionFinal.textContent = `Puntuación: ${puntuacion}`;
-  contenedorPreguntas.style.display = "block";
-  botonReset.style.display = "none";
+  contenedorPreguntas.classList.remove("hidden");
+  botonReset.classList.remove("show");
   renderApp();
 };
 

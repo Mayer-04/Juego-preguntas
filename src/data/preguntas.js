@@ -1,4 +1,4 @@
-export const questions = [
+export const preguntas = [
   {
     question: "¿Cuál es el lugar más frío de la tierra?",
     answers: ["Antártida", "Polo Norte", "Siberia", "Groenlandia"],
