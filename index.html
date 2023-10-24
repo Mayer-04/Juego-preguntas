@@ -7,7 +7,32 @@
     <meta name="author" content="Mayer Andres Chaves Prada" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main class="quiz-container">
+        <header class="quiz-header">
+          <h1 class="quiz-title">Juego de preguntas</h1>
+          <span class="quiz-category">Cultura general</span>
+        </header>
+
+        <section class="question-section">
+          <div class="question-container">
+            <p class="question-text" id="question">
+              <!-- Las preguntas -->
+            </p>
+          </div>
+          <div class="answer-container" id="answer">
+            <!-- Contenedor de las respuestas - button class="answer-button" -->
+          </div>
+        </section>
+
+        <footer class="quiz-footer">
+          <p class="score-text" id="score">Puntuación: 10</p>
+          <button class="reset-button" type="button" id="reset">
+            Reiniciar
+          </button>
+        </footer>
+      </main>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
