@@ -108,8 +108,6 @@
   font-weight: 600;
 }
 
-/* Question */
-
 .question-section {
   margin-bottom: 10px;
 }
@@ -175,4 +173,20 @@
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+.final-results {
+  font-size: 1.125rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Clases de utilidad */
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
 }
