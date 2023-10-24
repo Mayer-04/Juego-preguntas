@@ -1,4 +1,4 @@
-import { questions } from "./data/questions.js";
+import { preguntas } from "./data/preguntas.js";
 
 /**
  *
@@ -12,7 +12,7 @@ export const mostrarRespuestas = (
   contenedorRespuestas,
   obtenerBotones
 ) => {
-  const { answers } = questions[preguntaActual];
+  const { answers } = preguntas[preguntaActual];
   const botones = answers
     .map((pregunta) => `<button class="answer-button">${pregunta}</button>`)
     .join(" ");

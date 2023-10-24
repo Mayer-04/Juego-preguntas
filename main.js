@@ -1,5 +1,5 @@
 import "./style.css";
-import { questions } from "./src/data/questions.js";
+import { preguntas } from "./src/data/preguntas.js";
 import { mostrarPreguntas } from "./src/mostrar-preguntas.js";
 import { mostrarRespuestas } from "./src/mostrar-respuestas.js";
 
@@ -31,7 +31,7 @@ const obtenerBotones = () => {
  */
 
 const checkRespuesta = (index) => {
-  const respuestaCorrecta = index === questions[preguntaActual].correct;
+  const respuestaCorrecta = index === preguntas[preguntaActual].correct;
   const seleccionarBoton = contenedorRespuestas.querySelector(
     `button:nth-child(${index + 1})`
   );
@@ -47,7 +47,7 @@ const pasarPregunta = () => {
   setTimeout(() => {
     contenedorRespuestas.innerHTML = "";
     preguntaActual++;
-    if (preguntaActual < questions.length) {
+    if (preguntaActual < preguntas.length) {
       renderApp();
     } else {
       mostrarResultados();
@@ -61,7 +61,7 @@ const mostrarResultados = () => {
   contenedorPreguntas.classList.add("hidden");
   contenedorRespuestas.innerHTML = `
       <p class="final-results">Preguntas completadas!</p>
-      <p class="final-results">Puntuación: ${puntuacion} de ${questions.length}</p>
+      <p class="final-results">Puntuación: ${puntuacion} de ${preguntas.length}</p>
         `;
   botonReset.classList.add("show");
 };

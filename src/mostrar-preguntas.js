@@ -1,4 +1,4 @@
-import { questions } from "./data/questions.js";
+import { preguntas } from "./data/preguntas.js";
 
 /**
  *
@@ -7,6 +7,6 @@ import { questions } from "./data/questions.js";
  */
 
 export const mostrarPreguntas = (preguntaActual, contenedorPreguntas) => {
-  const { question } = questions[preguntaActual];
+  const { question } = preguntas[preguntaActual];
   contenedorPreguntas.textContent = question;
 };
