@@ -18,19 +18,18 @@ const renderApp = () => {
 };
 
 const obtenerBotones = () => {
-  const obtenerBotones = contenedorRespuestas.querySelectorAll("button");
+  const botones = contenedorRespuestas.querySelectorAll("button");
 
-  obtenerBotones.forEach((boton, index) => {
+  botones.forEach((boton, index) => {
     boton.addEventListener("click", () => checkRespuesta(index));
   });
 };
 
-const checkRespuesta = (selectedIndex) => {
-  const respuestaCorrecta = selectedIndex === questions[preguntaActual].correct;
+const checkRespuesta = (index) => {
+  const respuestaCorrecta = index === questions[preguntaActual].correct;
   const seleccionarBoton = contenedorRespuestas.querySelector(
-    `button:nth-child(${selectedIndex + 1})`
+    `button:nth-child(${index + 1})`
   );
-
   seleccionarBoton.classList.add(respuestaCorrecta ? "correct" : "incorrect");
 
   puntuacion += respuestaCorrecta;
