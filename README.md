@@ -15,3 +15,8 @@ pnpm install
 
 ```bash
 pnpm run dev
+```
+
+## Proyecto
+
+![ProyectoRick and Morty](public/imagen-juego.png)
