@@ -2,6 +2,7 @@ import "./style.css";
 import { preguntas } from "./src/data/preguntas.js";
 import { mostrarPreguntas } from "./src/mostrar-preguntas.js";
 import { mostrarRespuestas } from "./src/mostrar-respuestas.js";
+import { mostrarResultados } from "./src/mostrar-resultados";
 
 const contenedorCabecera = document.querySelector(".quiz-header");
 const contenedorPreguntas = document.getElementById("question");
@@ -50,20 +51,10 @@ const pasarPregunta = () => {
     if (preguntaActual < preguntas.length) {
       renderApp();
     } else {
-      mostrarResultados();
+      mostrarResultados(puntuacion);
     }
     puntuacionFinal.textContent = `Puntuación: ${puntuacion}`;
   }, TIME_OUT);
-};
-
-const mostrarResultados = () => {
-  contenedorCabecera.classList.add("hidden");
-  contenedorPreguntas.classList.add("hidden");
-  contenedorRespuestas.innerHTML = `
-      <p class="final-results">Preguntas completadas!</p>
-      <p class="final-results">Puntuación: ${puntuacion} de ${preguntas.length}</p>
-        `;
-  botonReset.classList.add("show");
 };
 
 const resetearPreguntas = () => {
